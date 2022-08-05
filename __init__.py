@@ -191,7 +191,7 @@ def tryLemmatizers(wordList: list, func: Callable, funcArgs: Optional[tuple]=(),
     iteratedLemmatizers = [*LEMMATIZERS, None] if includeNone else LEMMATIZERS
     for lemmatizer in iteratedLemmatizers:
         lemmatizedWords = lemmatizer(wordList) if lemmatizer else wordList
-        funcOutput = func(lemmatizedWords=lemmatizedWords)
+        funcOutput = func(lemmatizedWords=lemmatizedWords, *funcArgs, **funcKwargs)
         print(f"""
               {'-' * 20}
               Lemmatizer: {type(lemmatizer).__name__}
