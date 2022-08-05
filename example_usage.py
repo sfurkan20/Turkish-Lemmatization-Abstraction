@@ -1,9 +1,9 @@
-import __init__ as turkish-lemma
+import __init__ as turkish_lemma
 #It is 'import turkish-lemma' in regular case (if pulled from pip)
 
 def example(lemmatizedWords=[]):
     return lemmatizedWords
-turkish-lemma.tryLemmatizers(wordList="Merhaba, bu bir test cümlesidir.".split(' '), func=example)
+turkish_lemma.tryLemmatizers(wordList="Merhaba, bu bir test cümlesidir.".split(' '), func=example)
 
 
 """
